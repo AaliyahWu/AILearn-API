@@ -25,4 +25,4 @@ def generate_image(request):
         image_url = response.json()["data"][0]
         return JsonResponse({"image_url": image_url})
     else:
-        return JsonResponse({"error": "API request failed"}, status=500)
+        return JsonResponse({"error": response.json()["error"]["message"]}, status=500)
