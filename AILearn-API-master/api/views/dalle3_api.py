@@ -1,8 +1,11 @@
 import requests
 from django.http import JsonResponse
 import openai
+import configparser
 def generate_image(request):
-    api_key = "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"
+    config = configparser.ConfigParser()
+    config.read('apikey.ini')
+    api_key = config['API_KEYS']['api_key']
     url = "https://api.openai.com/v1/images/generations"
 
     headers = {
