@@ -19,4 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('api/auth/', include('api.urls.auth_urls')), # 登入登出等功能 測試範例
+    path('api/dalle3/', include('api.urls.dalle3_urls')),
 ]

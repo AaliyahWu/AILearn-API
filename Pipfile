@@ -5,6 +5,11 @@ name = "pypi"
 
 [packages]
 django = "*"
+cryptocode = "*"
+djangorestframework = "*"
+django-filter = "*"
+requests = "*"
+openai = "*"
 
 [dev-packages]
 
