@@ -20,3 +20,14 @@ class User(models.Model):
     class Meta:
         managed = False
         db_table = 'user'
+
+class Chat(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    message = models.TextField()
+    response = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        managed = False
+        db_table = 'chatT'
+

@@ -13,7 +13,7 @@ def generate_image(request):
     }
 
     data = {
-        'model':'dall-e-3',
+        'model': 'dall-e-3',
         "prompt": "students are in the class, Flat Style",
         "n": 1,
         "size": "1024x1024"
